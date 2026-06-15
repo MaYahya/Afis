@@ -31,7 +31,7 @@ const FeaturedProducts = () => {
               {product.badge && <span className="product-badge">{product.badge}</span>}
               <Link to={`/products/${product.id}`} className="product-image">
                 {product.image ? (
-                  <img src={getImageUrl(product.image)} alt={product.name} />
+                  <img src={getImageUrl(product.image)} alt={`${product.name} - ${product.brand} POS Hardware in Qatar | AFIS`} />
                 ) : (
                   <div className="product-image-placeholder">
                     <FiMonitor size={32} />

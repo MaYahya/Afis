@@ -53,7 +53,7 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container">
         <Link to="/" className="navbar-logo">
-          <img src={logoImg} alt="AFIS Logo" className="logo-img" />
+          <img src={logoImg} alt="AFIS IT & POS Solutions - POS Systems and IT Hardware Qatar" className="logo-img" />
         </Link>
 
         <div className="nav-links">
@@ -116,7 +116,7 @@ const Navbar = () => {
       <div className={`nav-mobile-drawer ${mobileOpen ? 'open' : ''}`}>
         <div className="nav-mobile-drawer-header">
           <Link to="/" className="navbar-logo">
-            <img src={logoImg} alt="AFIS Logo" className="logo-img" />
+            <img src={logoImg} alt="AFIS IT & POS Solutions - POS Systems and IT Hardware Qatar" className="logo-img" />
           </Link>
           <button
             className="nav-mobile-drawer-close"

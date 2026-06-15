@@ -24,7 +24,7 @@ const HappyClients = () => {
             <div className="client-card" key={`${client.id}-${i}`}>
               <div className="client-card-logo">
                 {client.logo ? (
-                  <img src={getImageUrl(client.logo)} alt={client.name} />
+                  <img src={getImageUrl(client.logo)} alt={`${client.name} - Happy Client of AFIS POS Solutions in Qatar`} />
                 ) : (
                   <span className="client-card-initials">{client.name.charAt(0)}</span>
                 )}

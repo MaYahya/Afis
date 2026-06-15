@@ -56,7 +56,7 @@ const HeroSection = () => {
           <div className="hero-image">
             <img 
               src={activeBanner?.image ? getImageUrl(activeBanner.image) : heroProduct} 
-              alt="POS Terminal, Printer & Barcode Scanner" 
+              alt="POS Terminal and Barcode Scanner - POS Hardware Solutions in Qatar by AFIS" 
               className="hero-product-img" 
             />
           </div>

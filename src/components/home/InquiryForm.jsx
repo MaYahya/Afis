@@ -1,20 +1,32 @@
 import { useState } from 'react';
-import { FiSend } from 'react-icons/fi';
+import { FiSend, FiLoader } from 'react-icons/fi';
+import { submitInquiry } from '../../services/api';
 import './Sections.css';
 
 const InquiryForm = () => {
   const [formData, setFormData] = useState({
     name: '', company: '', phone: '', email: '', product: '', message: ''
   });
+  const [submitting, setSubmitting] = useState(false);
+  const [feedback, setFeedback] = useState(null);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert('Thank you! Your inquiry has been submitted. We will contact you shortly.');
-    setFormData({ name: '', company: '', phone: '', email: '', product: '', message: '' });
+    setSubmitting(true);
+    setFeedback(null);
+    try {
+      await submitInquiry(formData);
+      setFeedback({ type: 'success', message: 'Thank you! Your inquiry has been submitted. We will contact you shortly.' });
+      setFormData({ name: '', company: '', phone: '', email: '', product: '', message: '' });
+    } catch {
+      setFeedback({ type: 'error', message: 'Failed to send. Please try again or email us directly at helpdesk@afis.qa' });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -84,8 +96,22 @@ const InquiryForm = () => {
                 />
               </div>
               <div className="full-width">
-                <button type="submit" className="btn btn-primary btn-lg">
-                  Submit Inquiry <FiSend size={16} />
+                {feedback && (
+                  <div style={{
+                    padding: '12px 16px',
+                    borderRadius: '12px',
+                    marginBottom: '16px',
+                    fontSize: '14px',
+                    fontWeight: '500',
+                    background: feedback.type === 'success' ? '#ecfdf5' : '#fef2f2',
+                    color: feedback.type === 'success' ? '#065f46' : '#991b1b',
+                    border: feedback.type === 'success' ? '1px solid #a7f3d0' : '1px solid #fecaca'
+                  }}>
+                    {feedback.message}
+                  </div>
+                )}
+                <button type="submit" className="btn btn-primary btn-lg" disabled={submitting} style={{ opacity: submitting ? 0.7 : 1 }}>
+                  {submitting ? <><FiLoader size={16} style={{ animation: 'spin 1s linear infinite' }} /> Sending...</> : <><FiSend size={16} /> Submit Inquiry</>}
                 </button>
               </div>
             </div>

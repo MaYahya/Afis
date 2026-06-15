@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.afis.qa/sitemap.xml
+
+# Disallow admin paths
+Disallow: /admin
+Disallow: /api

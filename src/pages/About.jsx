@@ -1,9 +1,17 @@
+import SEO from '../components/SEO';
 import { FiTarget, FiAward, FiUsers } from 'react-icons/fi';
 import './Pages.css';
 
 const About = () => {
   return (
     <div className="page-wrapper" style={{ paddingBottom: 0 }}>
+      <SEO
+        title="About Us"
+        description="Learn about AFIS IT & POS Solutions - Qatar's trusted partner for POS hardware, IT solutions, and business technology. Over 10 years of experience serving retail and hospitality."
+        keywords="about AFIS Qatar, POS company Doha, IT solutions Qatar, POS provider Qatar, technology partner Qatar"
+        keywordsAr="عن افيس قطر, شركة نقاط البيع الدوحة, حلول تقنية قطر, مزود نقاط البيع قطر, شريك تكنولوجيا قطر"
+        canonical="https://www.afis.qa/about"
+      />
       <div className="about-hero">
         <div className="container">
           <h1>Our Story</h1>

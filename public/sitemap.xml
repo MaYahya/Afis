@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.afis.qa/</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.afis.qa/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.afis.qa/ar"/>
+  </url>
+  <url>
+    <loc>https://www.afis.qa/products</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.afis.qa/products"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.afis.qa/ar/products"/>
+  </url>
+  <url>
+    <loc>https://www.afis.qa/software</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.afis.qa/software"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.afis.qa/ar/software"/>
+  </url>
+  <url>
+    <loc>https://www.afis.qa/about</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.afis.qa/about"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.afis.qa/ar/about"/>
+  </url>
+  <url>
+    <loc>https://www.afis.qa/contact</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.afis.qa/contact"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.afis.qa/ar/contact"/>
+  </url>
+  <url>
+    <loc>https://www.afis.qa/request-quote</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.afis.qa/request-quote"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.afis.qa/ar/request-quote"/>
+  </url>
+</urlset>

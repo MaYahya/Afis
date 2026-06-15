@@ -17,7 +17,7 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="footer-brand">
             <Link to="/" className="navbar-logo">
-              <img src={logoImg} alt="AFIS Logo" className="logo-img" />
+              <img src={logoImg} alt="AFIS IT & POS Solutions - POS Systems and IT Hardware Qatar" className="logo-img" />
             </Link>
             <p>We provide complete IT Hardware, POS Systems and Point of Sale solutions to help your business grow.</p>
             <div className="footer-social">

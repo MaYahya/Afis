@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { FiStar, FiMonitor, FiChevronRight, FiChevronLeft, FiFilter, FiPlus, FiTrash2 } from 'react-icons/fi';
+import SEO from '../components/SEO';
 import { useCart } from '../context/CartContext';
 import { useSiteData } from '../context/SiteContext';
 import { getImageUrl } from '../services/api';
@@ -51,6 +52,13 @@ const Products = () => {
 
   return (
     <div className="page-wrapper">
+      <SEO
+        title="Products"
+        description="Browse our complete range of POS hardware in Qatar including POS terminals, receipt printers, barcode scanners, cash drawers, and label printers. Genuine products with warranty."
+        keywords="POS hardware Qatar, POS terminals Doha, receipt printers Qatar, barcode scanners Qatar, cash drawers, label printers Qatar, IT hardware Qatar"
+        keywordsAr="أجهزة نقاط البيع قطر, طابعات الفواتير قطر, ماسحات الباركود قطر, أدراج النقود قطر, طابعات الملصقات قطر, اجهزة كمبيوتر قطر"
+        canonical="https://www.afis.qa/products"
+      />
       {/* Dynamic Landscape Banner */}
       {pageBanners.length > 0 && (
         <div className="products-banner-wrapper">
@@ -63,7 +71,7 @@ const Products = () => {
                     <p>{banner.subtitle}</p>
                   </div>
                   <div className="banner-image">
-                    <img src={banner.image ? getImageUrl(banner.image) : heroProduct} alt={banner.title} />
+                    <img src={banner.image ? getImageUrl(banner.image) : heroProduct} alt={`${banner.title} - POS Hardware Products in Qatar | AFIS`} />
                   </div>
                 </div>
               </div>
@@ -119,7 +127,7 @@ const Products = () => {
                   {product.badge && <span className="product-badge">{product.badge}</span>}
                   <Link to={`/products/${product.id}`} className="product-image">
                     {product.image ? (
-                      <img src={getImageUrl(product.image)} alt={product.name} />
+                      <img src={getImageUrl(product.image)} alt={`${product.name} - ${product.brand} POS Hardware in Qatar | AFIS`} />
                     ) : (
                       <div className="product-image-placeholder">
                         <FiMonitor size={32} />

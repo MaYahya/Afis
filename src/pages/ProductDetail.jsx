@@ -1,5 +1,6 @@
 import { Link, useParams } from 'react-router-dom';
 import { FiPackage, FiPlus, FiTrash2, FiStar, FiChevronRight } from 'react-icons/fi';
+import SEO from '../components/SEO';
 import { useCart } from '../context/CartContext';
 import { useSiteData } from '../context/SiteContext';
 import { getImageUrl } from '../services/api';
@@ -28,6 +29,14 @@ const ProductDetail = () => {
 
   return (
     <div className="page-wrapper product-detail-page">
+      <SEO
+        title={product?.name || 'Product Details'}
+        description={product?.description || 'Shop genuine POS hardware and IT products in Qatar. Best prices, 1 year warranty, 24/7 support.'}
+        keywords={`${product?.name || 'POS hardware'} Qatar, ${product?.brand || 'IT hardware'} Doha, buy POS systems Qatar`}
+        keywordsAr={`${product?.name || 'أجهزة نقاط البيع'} قطر, ${product?.brand || 'أجهزة كمبيوتر'} الدوحة, شراء أنظمة نقاط البيع قطر`}
+        canonical={`https://www.afis.qa/products/${product?.id || ''}`}
+        image={product?.image ? undefined : undefined}
+      />
       <div className="container" style={{ paddingTop: '120px' }}>
         <div className="breadcrumb">
           <Link to="/products">Products</Link>
@@ -38,7 +47,7 @@ const ProductDetail = () => {
         <div className="product-detail-layout">
           <div className="product-detail-image">
             {product.image ? (
-              <img src={getImageUrl(product.image)} alt={product.name} />
+              <img src={getImageUrl(product.image)} alt={`${product.name} - ${product.brand} POS Hardware in Qatar | AFIS`} />
             ) : (
               <div className="product-detail-placeholder">
                 <FiPackage size={120} />

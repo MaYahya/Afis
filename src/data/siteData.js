@@ -6,6 +6,8 @@ import {
   FiZap, FiSmartphone, FiAward, FiClock
 } from 'react-icons/fi';
 
+// Note: Imports kept for dynamic icon mapping in components
+
 export const siteConfig = {
   phone: '+974 7476 1025',
   phone2: '+974 3088 3425',

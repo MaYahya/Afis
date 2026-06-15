@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { FiStar, FiChevronRight, FiChevronLeft, FiFilter, FiMonitor, FiPlus, FiTrash2 } from 'react-icons/fi';
+import SEO from '../components/SEO';
 import { useCart } from '../context/CartContext';
 import { useSiteData } from '../context/SiteContext';
 import { getImageUrl } from '../services/api';
 import heroProduct from '../assets/hero1.png';
 import './Pages.css';
-
 
 
 const Software = () => {
@@ -53,6 +53,13 @@ const Software = () => {
 
   return (
     <div className="page-wrapper">
+      <SEO
+        title="Software Solutions"
+        description="Explore TOTEM POS software - complete cloud based POS software for retail, restaurant and multi-store businesses in Qatar. Inventory management, sales reports, loyalty programs."
+        keywords="POS software Qatar, restaurant POS software Doha, retail POS software, TOTEM POS Qatar, cloud POS Qatar, inventory management Qatar"
+        keywordsAr="برنامج نقاط البيع قطر, برنامج كاشير مطاعم الدوحة, برنامج مبيعات التجزئة قطر, توتيم بي او اس قطر, برنامج سحابي قطر, ادارة المخزون قطر"
+        canonical="https://www.afis.qa/software"
+      />
       {/* Dynamic Landscape Banner */}
       {pageBanners.length > 0 && (
         <div className="products-banner-wrapper">
@@ -65,7 +72,7 @@ const Software = () => {
                     <p>{banner.subtitle}</p>
                   </div>
                   <div className="banner-image">
-                    <img src={banner.image ? getImageUrl(banner.image) : heroProduct} alt={banner.title} />
+                    <img src={banner.image ? getImageUrl(banner.image) : heroProduct} alt={`${banner.title} - POS Software Solutions in Qatar | AFIS`} />
                   </div>
                 </div>
               </div>
@@ -123,7 +130,7 @@ const Software = () => {
                   {/* Distinct Software Image Placeholder */}
                   <Link to={`/products/${product.id}`} className="product-image" style={{ background: '#f8fafc', padding: '24px', textDecoration: 'none' }}>
                     {product.image ? (
-                        <img src={getImageUrl(product.image)} alt={product.name} style={{ width: '100%', height: '160px', objectFit: 'contain' }} />
+                        <img src={getImageUrl(product.image)} alt={`${product.name} - ${product.brand} POS Software in Qatar | AFIS`} style={{ width: '100%', height: '160px', objectFit: 'contain' }} />
                     ) : (
                         <div className="product-image-placeholder" style={{ 
                         width: '100%', height: '160px', 

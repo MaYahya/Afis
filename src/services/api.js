@@ -27,4 +27,14 @@ export const getImageUrl = (path) => {
   return `${STORAGE_URL}/${path}`;
 };
 
+export const submitInquiry = async (formData) => {
+  try {
+    const response = await api.post('/inquiry', formData);
+    return response.data;
+  } catch (error) {
+    console.error('Error submitting inquiry:', error);
+    throw error;
+  }
+};
+
 export default api;
