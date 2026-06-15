@@ -6,6 +6,10 @@
   position: relative;
 }
 
+.hero.loading {
+  min-height: 80vh;
+}
+
 .hero::before {
   content: '';
   position: absolute;
